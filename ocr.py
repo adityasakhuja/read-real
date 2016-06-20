@@ -14,10 +14,9 @@ except ImportError:
 	from PIL import Image
 import pytesseract
 
-#print(pytesseract.image_to_string(Image.open('TestImages/test4.jpg')))
 
 ## Function used by main function to initiate OCR
 def read():
-	characters = pytesseract.image_to_string(Image.open('TestImages/test.jpg'))
-	return characters
+	text = pytesseract.image_to_string(Image.open('TestImages/test.jpg'))
+	return text
 
