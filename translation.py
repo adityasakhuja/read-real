@@ -1,3 +1,14 @@
+##########################
+## Name: translation.py
+## Author: Aditya Sakhuja
+## Date: Monday, 20 June 2016
+## Description: Takes as input a character
+## and outputs its corresponding 6-bit code
+##########################
+
+## Lookup table containing ASCII characters and
+## their corresponding 6-bit braille code
+
 ASCIItoBraille = { 'A' : '100000', 'a' : '100000',
 		   'B' : '101000', 'b' : '101000',
 		   'C' : '110000', 'c' : '110000',
@@ -44,4 +55,9 @@ ASCIItoBraille = { 'A' : '100000', 'a' : '100000',
 		   ' ' : '000000' }
 		 ## Cannot recognise characters:
 		 # '\' : '101101', ''' : '000010',
-		 # '"' : '000100' 
+		 # '"' : '000100'
+
+## Function used to translate characters in the main function
+def translate(char):
+	return ASCIItoBraille[char]
+ 
