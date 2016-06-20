@@ -14,12 +14,12 @@ except ImportError:
 	from PIL import Image
 import pytesseract
 
-print(pytesseract.image_to_string(Image.open('image.jpg')))
+#print(pytesseract.image_to_string(Image.open('TestImages/test4.jpg')))
 
 
-#def read():
-#	characters = pytesseract.image_to_string(Image.open('image.jpg'))
-#	return characters
-#
-#print read()
+def read():
+	characters = pytesseract.image_to_string(Image.open('TestImages/test.jpg'))
+	return characters
+
+print read()
 

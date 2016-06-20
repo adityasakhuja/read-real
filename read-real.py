@@ -14,6 +14,8 @@ try:
 except ImportError:
 	from PIL import Image
 import pytesseract
+
+from ocr import read
 ############################
 
 
@@ -22,6 +24,9 @@ camera = PiCamera()
 camera.start_preview()
 sleep(10)
 camera.capture('image.jpg')
+
+## Optical Character Recognition
+read()
 
 ## Translation
 
