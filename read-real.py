@@ -15,10 +15,11 @@
 
 import os
 import sys
-from time import sleep
+import serial
 
 ## For Image Capture
 from picamera import PiCamera
+from time import sleep
 
 ## For Optical Character Recognition
 from ocr import read
@@ -27,6 +28,8 @@ from ocr import read
 from translation import translate
 
 
+## Open Serial connection wtih Arduino board
+arduino = serial.Serial(port, 9600)	# find port number
 
 ## Camera Setup and Capture
 camera = PiCamera()
@@ -40,6 +43,7 @@ text = read()
 ## Translation
 for letter in text:
 	braille = translate(letter)
+	arduino.write(braille)
 	print letter + " " + braille
 
 
