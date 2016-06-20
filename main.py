@@ -1,3 +1,11 @@
+## Name: read-real.py
+## Author: Aditya Sakhuja
+## Date: Monday, 20 June 2016
+## Description: 
+##
+
+
+#############################
 import sys
 from time import sleep
 from picamera import PiCamera
@@ -6,9 +14,16 @@ try:
 except ImportError:
 	from PIL import Image
 import pytesseract
+############################
 
 
+## Camera Setup and Capture
 camera = PiCamera()
-camera.resolution = (1024, 768)
-camera.capture('test.jpg')
+camera.start_preview()
+sleep(10)
+camera.capture('image.jpg')
+
+## Translation
+
+
 
