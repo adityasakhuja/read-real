@@ -28,7 +28,7 @@ from ocr import read
 from translation import translate
 
 ## Open Serial connection wtih Arduino board
-arduino = serial.Serial(port, 9600)	# find port number
+arduino = serial.Serial('/dev/ttyACM0', 9600)	# find port number
 
 ## Camera Setup and Capture
 camera = PiCamera()
