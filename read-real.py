@@ -27,7 +27,6 @@ from ocr import read
 ## For Translation
 from translation import translate
 
-
 ## Open Serial connection wtih Arduino board
 arduino = serial.Serial(port, 9600)	# find port number
 
