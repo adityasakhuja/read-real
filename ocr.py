@@ -17,6 +17,6 @@ import pytesseract
 
 ## Function used by main function to initiate OCR
 def read():
-	text = pytesseract.image_to_string(Image.open('TestImages/test.jpg'))
+	text = pytesseract.image_to_string(Image.open('image.jpg'))
 	return text
 

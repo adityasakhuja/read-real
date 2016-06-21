@@ -28,14 +28,14 @@ from ocr import read
 from translation import translate
 
 ## Open Serial connection wtih Arduino board
-arduino = serial.Serial('/dev/ttyACM2', 9600)	# find port number
+arduino = serial.Serial('/dev/ttyACM3', 9600)	# find port number
 arduino.write('000000')
 
 ## Camera Setup and Capture
-#camera = PiCamera()
-#camera.start_preview()
-#sleep(10)
-#camera.capture('image.jpg')
+camera = PiCamera()
+camera.start_preview()
+sleep(10)
+camera.capture('image.jpg')
 
 ## Optical Character Recognition
 text = read()
