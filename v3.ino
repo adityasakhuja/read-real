@@ -21,14 +21,13 @@ void loop() {
     else if (state == '0') {
       digitalWrite(pin, LOW);
     }
-    Serial.println(pin);
-    Serial.print("State = ");
-    Serial.println(state);
+    //Serial.println(pin);
+    //Serial.print("State = ");
+    //Serial.println(state);
     if ( pin < 13) {
       pin++;
     } else {
       pin = 8;
-      delay(1000);
     }
   }
 }
