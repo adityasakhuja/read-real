@@ -31,10 +31,10 @@ from translation import translate
 arduino = serial.Serial('/dev/ttyACM0', 9600)	# find port number
 
 ## Camera Setup and Capture
-camera = PiCamera()
+#camera = PiCamera()
 #camera.start_preview()
 #sleep(10)
-camera.capture('image.jpg')
+#camera.capture('image.jpg')
 
 ## Optical Character Recognition
 text = read()
@@ -44,6 +44,7 @@ for letter in text:
 	braille = translate(letter)
 	arduino.write(braille)
 	print letter + " " + braille
+	sleep(1)
 
 
 ## Delete image file captured
