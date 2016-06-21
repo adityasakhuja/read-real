@@ -28,7 +28,8 @@ from ocr import read
 from translation import translate
 
 ## Open Serial connection wtih Arduino board
-arduino = serial.Serial('/dev/ttyACM0', 9600)	# find port number
+arduino = serial.Serial('/dev/ttyACM2', 9600)	# find port number
+arduino.write('000000')
 
 ## Camera Setup and Capture
 #camera = PiCamera()
@@ -42,9 +43,9 @@ text = read()
 ## Translation
 for letter in text:
 	braille = translate(letter)
+	print letter + ": " + braille
 	arduino.write(braille)
-	print letter + " " + braille
-	sleep(1)
+	sleep(2)
 
 
 ## Delete image file captured
